@@ -1,0 +1,41 @@
+You will need to import the classicmodels database from mysqlsampledatabase.sql
+using MySQL workbench before you start working on this assignment.
+
+For the questions, put your SQL query first and your output second.
+For example,
+Question:
+How many customers have a credit limit over $20,000?
+
+Answer:
+SELECT COUNT(*) FROM `customers` WHERE `creditLimit` > 20000;
+97
+
+1. How many customers are located in Germany? (Should return only 1 field with the count.)
+
+2. What is the contact first name and contact last name for every contact that has a first name that starts with D?
+
+3. What are the customer names for every company that Leslie Tompson is a sales rep for?
+
+4. What was the amount for the last payment that Boards & Toys Co. made? (Should return only 1 field with the amount.)
+
+5. How many payments have been made that are more than 20000? (Should return 1 field with the count.)
+
+6. Write a PHP program that prints the following information to the terminal:
+The customer name, country, and sales rep name on one line per customer.
+Order the results by country first and customer name second.
+See assignment_3_solution_output.txt for what the output should look like.
+assignment_3.php contains most of the code you need to complete the assignment.
+You will need to write the SQL query and write the output.
+You should use only 1 SQL query to the database.
+
+Problems 1 through 5 are worth 10 points each.
+Problem 6 is worth 40 points.
+The total number of points for the assignment is 90.
+
+Point breakdown for problem 6:
+10 points - 1 SQL query
+10 points - correct output format (see assignment_3_solution_output.txt)
+ 5 points - correct data from the customers table
+ 5 points - correct data from the employees table
+ 5 points - order by country first
+ 5 points - order by customer name second
