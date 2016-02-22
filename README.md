@@ -9,6 +9,10 @@ To help you learn the basics of:
 * Importing databases from SQL scripts
 * Using PHP to query and report from a MySQL database
 
+Collaboration
+-------------
+You can talk about the assignment with your peers in the class.  However, you should perform the work yourself and turn in a copy of your work.
+
 Prerequisites
 -------------
 * You will need MySQL installed.  If you are not part of the database course, install XAMPP.  If you are part of the MySQL course, you can use the MySQL version you installed already.
