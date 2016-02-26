@@ -11,14 +11,61 @@ SELECT COUNT(*) FROM `customers` WHERE `creditLimit` > 20000;
 97
 
 1. How many customers are located in Germany? (Should return only 1 field with the count.)
+SELECT COUNT(*) FROM `customers` WHERE`country` = 'Germany';
 
-2. What is the contact first name and contact last name for every contact that has a first name that starts with D?
+13
+
+2. What is the contact first name and contact lat name for every contact that has a first name that starts with D?
+
+SELECT contactFirstName, contactLastName 
+FROM `customers` 
+WHERE `contactFirstName` LIKE 'D%';
+
+Diego 	Freyre
+Dean	Cassidy
+Daniel	Da Silva
+Daniel 	Tonini
+Dorothy	Young
+Dominique	Perrier
+Dan	Lewis
 
 3. What are the customer names for every company that Leslie Tompson is a sales rep for?
 
+SELECT customers.contactFirstName, customers.contactLastName 
+FROM `customers`, `employees` 
+WHERE customers.salesrepemployeenumber = employees.employeenumber 
+and employees.firstname = 'Leslie' and employees.lastname = 'Thompson';
+
+Jean	King
+Julie	Young
+Mary	Young
+Valarie	Thompson
+Brian	Chandler
+Steve	Thompson
+
 4. What was the amount for the last payment that Boards & Toys Co. made? (Should return only 1 field with the amount.)
 
+SELECT amount
+
+FROM payments, customers 
+
+WHERE customers.customerNumber = payments.customerNumber
+ 
+and customers.customerName = 'Boards & Toys Co.'
+
+ORDER BY paymentDate DESC LIMIT 1;
+
+3452.75
+
 5. How many payments have been made that are more than 20000? (Should return 1 field with the count.)
+
+SELECT count(*)
+
+FROM payments
+
+WHERE amount > 20000;
+
+195
 
 6. Write a PHP program that prints the following information to the terminal:
 The customer name, country, and sales rep name on one line per customer.
